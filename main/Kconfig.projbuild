@@ -103,7 +103,7 @@ choice BOARD_TYPE
     config BOARD_TYPE_ESP32S3_Touch_LCD_1_85C
         bool "Waveshare ESP32-S3-Touch-LCD-1.85C"
     config BOARD_TYPE_ESP32S3_Touch_LCD_1_85
-        bool "Waveshare ESP32-S3-Touch-LCD-1.85"
+        bool "嘟嘟实战开发版"
     config BOARD_TYPE_ESP32S3_Touch_LCD_1_46
         bool "Waveshare ESP32-S3-Touch-LCD-1.46"
     config BOARD_TYPE_TUDOUZI
