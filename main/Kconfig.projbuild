@@ -162,6 +162,26 @@ choice DISPLAY_OLED_TYPE
         bool "SSD1306, 分辨率128*64"
 endchoice
 
+config LCD_ST77916_SUPPORT
+    depends on BOARD_TYPE_BREAD_COMPACT_WIFI_DUDU  # 仅限特定开发板dudu 开发板
+    bool "Enable ST77916 LCD (360x360)"
+    default y
+    help
+        启用 ST77916 QSPI 屏幕支持
+
+if LCD_ST77916_SUPPORT
+    config LCD_QSPI_ENABLE
+        bool "Enable QSPI Interface"
+        default y
+    config LCD_RES_WIDTH
+        int "LCD Width"
+        default 360
+    config LCD_RES_HEIGHT
+        int "LCD Height"
+        default 360
+endif
+
+
 choice DISPLAY_LCD_TYPE
     depends on BOARD_TYPE_BREAD_COMPACT_WIFI_LCD || BOARD_TYPE_BREAD_COMPACT_ESP32_LCD || BOARD_TYPE_ESP32_CGC
     prompt "LCD Type"
