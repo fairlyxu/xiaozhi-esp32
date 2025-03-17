@@ -42,7 +42,8 @@
 #define QSPI_PIN_NUM_LCD_BL     GPIO_NUM_5
 
 #define DISPLAY_OFFSET_X  0
-#define DISPLAY_OFFSET_Y  0
+#define DISPLAY_OFF
+SET_Y  0
 
 #define TP_PORT          (I2C_NUM_1)
 #define TP_PIN_NUM_SDA   (I2C_SDA_IO)

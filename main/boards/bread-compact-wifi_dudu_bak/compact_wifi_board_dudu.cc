@@ -1,7 +1,7 @@
 // 增加必要的头文件
-#include "esp_lcd_panel_io.h"
-#include "esp_lcd_panel_ops.h"
-#include "esp_lcd_st77916.h"
+#include <esp_lcd_panel_io.h>
+#include <esp_lcd_panel_ops.h>
+#include <esp_lcd_st77916.h>
 #include "esp_io_expander_tca9554.h"
 #include "wifi_board.h"
 #include "audio_codecs/no_audio_codec.h"
@@ -20,7 +20,7 @@
 #include <esp_lcd_panel_ops.h>
 #include <esp_lcd_panel_vendor.h>
 
-#define TAG "CompactWifiBoard"
+#define TAG "CompactWifiBoardDuDu"
 
 LV_FONT_DECLARE(font_puhui_14_1);
 LV_FONT_DECLARE(font_awesome_14_1);
@@ -305,7 +305,7 @@ public:
         //InitializeDisplayI2c(); 修改了修改了
         //InitializeSsd1306Display();修改了修改了
         InitializeButtons();
-        InitializeIot();
+        //InitializeIot();
     }
 
      // 添加背光控制接口 新增新增

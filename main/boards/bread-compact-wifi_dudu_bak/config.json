@@ -1,0 +1,12 @@
+{
+    "target": "esp32s3",
+    "builds": [
+        {
+            "name": "bread-compact-wifi-dudu",
+            "sdkconfig_append": [
+                "CONFIG_LCD_QSPI_SUPPORT=y",    
+                "CONFIG_DRIVER_ST77916_ENABLE=y"
+            ]
+        }
+    ]
+}

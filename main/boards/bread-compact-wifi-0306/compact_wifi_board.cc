@@ -4,9 +4,7 @@
 #include "system_reset.h"
 #include "application.h"
 #include "button.h"
-#include "config.h"
-#include "iot/thing_manager.h"
-
+#include "config.h" 
 #include <esp_log.h>
 #include "i2c_device.h"
 #include <driver/i2c.h>
@@ -230,7 +228,7 @@ private:
             .scl_io_num = I2C_SCL_IO,
             .clk_source = I2C_CLK_SRC_DEFAULT,
         };
-        ESP_ERROR_CHECK(i2c_new_master_bus(&i2c_bus_cfg, &i2c_bus_));
+        //ESP_ERROR_CHECK(i2c_new_master_bus(&i2c_bus_cfg, &i2c_bus_));
     }
     
     void InitializeTca9554(void)
@@ -360,12 +358,7 @@ private:
             app.ToggleChatState();
         });
     }
-    // 物联网初始化，添加对 AI 可见设备
-    void InitializeIot() {
-        auto& thing_manager = iot::ThingManager::GetInstance();
-        thing_manager.AddThing(iot::CreateThing("Speaker"));
-        thing_manager.AddThing(iot::CreateThing("Backlight"));
-    }
+    
 public:
     CustomBoard() :
         boot_button_(BOOT_BUTTON_GPIO) {
@@ -373,8 +366,7 @@ public:
         InitializeTca9554();
         InitializeSpi();
         Initializest77916Display();
-        InitializeButtons();
-        InitializeIot();
+        InitializeButtons(); 
         GetBacklight()->RestoreBrightness();
     }
 
