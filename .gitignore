@@ -12,4 +12,4 @@ releases/
 main/assets/lang_config.h
 .DS_Store
 .idea
-.idea/
+.idea/*

@@ -53,12 +53,7 @@
 #define QSPI_PIN_NUM_LCD_RST    GPIO_NUM_NC   // 根据实际连接修改
 #define QSPI_PIN_NUM_LCD_BL     GPIO_NUM_5
 
-// 屏幕参数
-#define DISPLAY_WIDTH       360
-#define DISPLAY_HEIGHT      360
-#define DISPLAY_MIRROR_X    false
-#define DISPLAY_MIRROR_Y    false
-#define DISPLAY_SWAP_XY     false
+ 
 
 // I2C扩展器配置（新增）
 #define I2C_SCL_IO          GPIO_NUM_10       

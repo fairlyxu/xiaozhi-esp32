@@ -58,8 +58,8 @@ menu "Xiaozhi Assistant"
             bool "面包板新版接线（WiFi）"
         config BOARD_TYPE_BREAD_COMPACT_WIFI_V01
             bool "面包板新版接线（WiFi） V0.1"
-        config BOARD_TYPE_BREAD_COMPACT_WIFI_LCD
-            bool "面包板新版接线（WiFi）+ LCD"
+        config BOARD_TYPE_BREAD_COMPACT_WIFI_DUDU
+            bool "面包板新版接线（WiFi）嘟嘟 1.85屏"
         config BOARD_TYPE_BREAD_COMPACT_ML307
             bool "面包板新版接线（ML307 AT）"
         config BOARD_TYPE_BREAD_COMPACT_ESP32
